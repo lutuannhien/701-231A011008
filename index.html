@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề Thi Kết Thúc HP Lập Trình Web - Đề số 1</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-code"></i> Lập Trình Web - Đề Số 1</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                <li><a href="lythuyet.html"><i class="fa-solid fa-book-open"></i> a) Lý Thuyết</a></li>
+                <li><a href="baitap23.html"><i class="fa-solid fa-file-code"></i> b) Bài Tập 23</a></li>
+                <li><a href="baitap22.html"><i class="fa-solid fa-file-code"></i> c) Bài Tập 22</a></li>
+                <li><a href="diemdanh.html"><i class="fa-solid fa-user-check"></i> d) Điểm Danh</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Phần Bài Tập Thực Hành (60 điểm)</h2>
+        
+        <!-- Bài 1: Danh sách sản phẩm & Tìm kiếm -->
+        <section style="margin-bottom: 45px;">
+            <h3><i class="fa-solid fa-store" style="color: var(--primary);"></i> 1. Danh Sách Sản Phẩm & Tìm Kiếm</h3>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Nhập tên sản phẩm cần tìm kiếm...">
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+            </div>
+            <div id="productContainer" class="product-grid"></div>
+            <p id="searchError" class="alert-msg alert-danger"><i class="fa-solid fa-circle-exclamation"></i> Không tìm thấy sản phẩm phù hợp!</p>
+        </section>
+
+        <hr style="margin: 35px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <!-- Bài 2: Form đăng ký & LocalStorage -->
+        <section style="margin-bottom: 45px;">
+            <h3><i class="fa-solid fa-user-plus" style="color: var(--primary);"></i> 2. Đăng Ký Người Dùng</h3>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label><i class="fa-solid fa-user"></i> Họ và Tên:</label>
+                    <input type="text" id="regName" placeholder="Nhập họ và tên..." required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-envelope"></i> Email:</label>
+                    <input type="email" id="regEmail" placeholder="name@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-lock"></i> Mật khẩu (Ít nhất 8 ký tự, có chữ hoa, chữ thường, số):</label>
+                    <input type="password" id="regPassword" placeholder="••••••••" required>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="regTerms" required>
+                    <label for="regTerms">Đồng ý với các điều khoản sử dụng dịch vụ</label>
+                </div>
+                <button type="submit"><i class="fa-solid fa-check"></i> Đăng Ký Ngay</button>
+                <div id="regAlert" class="alert-msg"></div>
+            </form>
+        </section>
+
+        <hr style="margin: 35px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <!-- Bài 3: Đồng hồ đếm ngược -->
+        <section>
+            <h3><i class="fa-solid fa-clock" style="color: var(--primary);"></i> 3. Đồng Hồ Đếm Ngược (10 Phút)</h3>
+            <div class="timer-container">
+                <p style="font-size: 1.1rem; color: #cbd5e1;"><i class="fa-solid fa-hourglass-start"></i> Thời gian làm bài còn lại</p>
+                <div id="timerDisplay" class="timer-display">10:00</div>
+                <div class="timer-btns">
+                    <button id="startTimer" style="background: var(--accent);"><i class="fa-solid fa-play"></i> Bắt đầu</button>
+                    <button id="resetTimer" style="background: var(--danger);"><i class="fa-solid fa-rotate-right"></i> Đặt lại</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Phát triển bởi Lư Tuấn Nhiên | Trường Đại học Văn Hiến</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

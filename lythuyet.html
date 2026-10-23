@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần Lý Thuyết - Đề Thi Lập Trình Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-book-bookmark"></i> Phần Lý Thuyết (40 điểm)</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> Trang Chủ</a></li>
+                <li><a href="lythuyet.html" class="active"><i class="fa-solid fa-book-open"></i> a) Lý Thuyết</a></li>
+                <li><a href="baitap23.html"><i class="fa-solid fa-file-code"></i> b) Bài Tập 23</a></li>
+                <li><a href="baitap22.html"><i class="fa-solid fa-file-code"></i> c) Bài Tập 22</a></li>
+                <li><a href="diemdanh.html"><i class="fa-solid fa-user-check"></i> d) Điểm Danh</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tổng Hợp Câu Hỏi Lý Thuyết</h2>
+
+        <div class="theory-card">
+            <h3><i class="fa-solid fa-circle-question"></i> Câu 1: Sự khác biệt giữa position: absolute và position: relative</h3>
+            <p><strong>- Khái niệm cơ bản:</strong></p>
+            <ul style="margin-left: 20px; margin-bottom: 10px;">
+                <li><code>position: relative</code>: Giữ nguyên vị trí trong luồng tài liệu thông thường, dịch chuyển tương đối theo tọa độ <code>top</code>, <code>left</code>. Các phần tử xung quanh không bị ảnh hưởng không gian.</li>
+                <li><code>position: absolute</code>: Tách hoàn toàn khỏi luồng tài liệu, định vị tương đối theo phần tử cha gần nhất có khai báo position (khác static).</li>
+            </ul>
+            <p><strong>- Ứng dụng & Deploy:</strong> Dùng kết hợp tạo badge thông báo (như icon giỏ hàng). Hoạt động chuẩn xác trên mọi Hosting/CDN thuần CSS thuần túy.</p>
+        </div>
+
+        <div class="theory-card">
+            <h3><i class="fa-solid fa-circle-question"></i> Câu 2: Quy trình đăng ký domain, hosting và vai trò DNS</h3>
+            <p><strong>- Quy trình cấu hình:</strong> Mua tên miền tại nhà cung cấp -> Đăng ký hosting/GitHub Pages/Netlify -> Cấu hình bản ghi DNS (A Record hoặc CNAME) trỏ về server.</p>
+            <p><strong>- Vai trò DNS:</strong> Là hệ thống phân giải tên miền giúp chuyển đổi địa chỉ dạng chữ (URL) sang địa chỉ IP máy chủ để trình duyệt truy xuất.</p>
+            <p><strong>- Rủi ro bảo mật:</strong> Thiếu cấu hình HTTPS/SSL dẫn đến lộ dữ liệu truyền tải, hoặc cấu hình sai bản ghi dẫn đến thất thoát tên miền.</p>
+        </div>
+
+        <div class="theory-card">
+            <h3><i class="fa-solid fa-circle-question"></i> Câu 3: So sánh let, const và var trong JavaScript</h3>
+            <p><strong>- Scope & Hoisting:</strong> <code>var</code> có function scope, được hoisting và khởi tạo giá trị <code>undefined</code>. <code>let</code> và <code>const</code> có block scope, hoisting nhưng nằm trong Temporal Dead Zone. <code>const</code> không cho phép gán lại.</p>
+            <p><strong>- Debugging:</strong> Sử dụng Chrome DevTools (Tab Sources, Breakpoints hoặc câu lệnh <code>debugger;</code>) để theo dõi trực quan giá trị biến.</p>
+        </div>
+
+        <div class="theory-card">
+            <h3><i class="fa-solid fa-circle-question"></i> Câu 4: Khái niệm Event Delegation trong JavaScript</h3>
+            <p><strong>- Khái niệm:</strong> Kỹ thuật tận dụng hiện tượng nổi bọt sự kiện (Event Bubbling), gắn một listener duy nhất vào phần tử cha để quản lý sự kiện cho toàn bộ các phần tử con kể cả các phần tử sinh ra động (dynamic list).</p>
+            <p><strong>- Lợi ích:</strong> Tối ưu hiệu suất bộ nhớ DOM đáng kể khi danh sách dữ liệu lớn.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Phát triển bởi Lư Tuấn Nhiên | Trường Đại học Văn Hiến</p>
+    </footer>
+</body>
+</html>
